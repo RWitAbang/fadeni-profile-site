@@ -295,8 +295,8 @@ story.append(KeepTogether([
         styles["ContactP"],
     ),
     Paragraph(
-        f"To explore ongoing philanthropic initiatives, personal foundation work, and "
-        f"broader venture investments, visit <u>{esc(main_site_display)}</u>.",
+        f"To explore ongoing philanthropic initiatives and personal foundation work, "
+        f"visit <u>{esc(main_site_display)}</u>.",
         styles["ContactP"],
     ),
     Paragraph(

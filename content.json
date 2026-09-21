@@ -109,7 +109,7 @@
     "businessEmailIsPlaceholder": true,
     "mainSite": "https://www.seindefadeni.com",
     "line1": "For strategic collaborations, direct advisory, or general corporate matters, please direct all communication to {businessEmail}.",
-    "line2": "To explore ongoing philanthropic initiatives, personal foundation work, and broader venture investments, visit {mainSite}.",
+    "line2": "To explore ongoing philanthropic initiatives and personal foundation work, visit {mainSite}.",
     "line3": "You can also connect professionally via LinkedIn."
   },
 

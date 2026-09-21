@@ -207,7 +207,7 @@ body {
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 60px; list-style: none; }
 .edu-grid li {
   padding: 16px 0; border-bottom: 1px solid #E5E5E5; font-size: 16px; color: #333333;
-  display: flex; justify-content: space-between; gap: 16px;
+  display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: baseline;
 }
 .edu-grid li strong { color: #000000; font-weight: 500; }
 
@@ -275,8 +275,8 @@ body {
   /* Education rows: stack institution over credential instead of a
      cramped two-column split that wraps unevenly on narrow screens. */
   .edu-grid li {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
+    align-items: start;
     gap: 4px;
   }
 

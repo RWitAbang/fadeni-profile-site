@@ -125,7 +125,7 @@ async function loadProfile() {
   line1.appendChild(document.createTextNode('.'));
 
   const line2 = document.createElement('p');
-  line2.appendChild(document.createTextNode('To explore ongoing philanthropic initiatives, personal foundation work, and broader venture investments, visit '));
+  line2.appendChild(document.createTextNode('To explore ongoing philanthropic initiatives and personal foundation work, visit '));
   const siteLink = document.createElement('a');
   siteLink.href = c.mainSite;
   siteLink.target = '_blank';

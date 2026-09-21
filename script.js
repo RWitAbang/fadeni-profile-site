@@ -1,5 +1,5 @@
 async function loadProfile() {
-  const res = await fetch('content.json?v=5');
+  const res = await fetch('content.json?v=6');
   if (!res.ok) throw new Error('Could not load content.json (' + res.status + ')');
   const data = await res.json();
 

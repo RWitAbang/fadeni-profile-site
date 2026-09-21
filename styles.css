@@ -87,13 +87,13 @@ body {
 /* ---------- SECTION SHELL ---------- */
 .dossier-section {
   width: 100%;
-  padding: 96px 60px;
+  padding: 64px 60px;
   display: flex;
   justify-content: center;
 }
 .section-inner { max-width: 1200px; width: 100%; }
 
-.section-header { margin-bottom: 48px; }
+.section-header { margin-bottom: 36px; }
 .section-num {
   font-size: 11px;
   font-weight: 700;
@@ -180,7 +180,9 @@ body {
   padding: 36px 0;
   border-bottom: 1px solid #E5E5E5;
 }
-.footprint-item:first-child { border-top: 1px solid #E5E5E5; }
+/* No separate top border on the first item — the section heading's own
+   border-bottom already closes off the header, so a first-child top
+   border here just duplicated that line right underneath it. */
 .footprint-title { font-family: Georgia, serif; font-size: 23px; font-weight: 400; color: #000000; display: inline; }
 .former-tag {
   font-family: Arial, sans-serif;
@@ -214,7 +216,7 @@ body {
   padding: 20px 0; border-bottom: 1px solid #E5E5E5; display: flex;
   justify-content: space-between; align-items: baseline;
 }
-.rec-item:first-child { border-top: 1px solid #E5E5E5; }
+/* Same as Sector Footprint above — no duplicate top border on the first row. */
 .rec-award { font-size: 18px; font-weight: 500; color: #000000; }
 .rec-meta { font-size: 14px; color: #888888; text-align: right; }
 
@@ -256,7 +258,7 @@ body {
 @media (max-width: 992px) {
   .dossier-nav { padding: 18px 24px; }
   .brand-logo { height: 42px; }
-  .dossier-section { padding: 72px 24px; }
+  .dossier-section { padding: 52px 24px; }
   .hero-section { padding-top: 140px; }
   .hero-title { font-size: 40px; }
 

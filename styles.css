@@ -5,7 +5,11 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
-html, body { overflow-x: hidden; width: 100%; }
+/* Deliberately no overflow-x:hidden on html/body — that rule breaks
+   position: sticky (the nav bar) on Safari/iOS and other browsers.
+   The mobile off-canvas menu below is kept from causing horizontal
+   scroll a different way (opacity/visibility instead of an off-screen
+   transform), so this isn't needed. */
 
 body {
   background-color: #FFFFFF;
@@ -254,6 +258,45 @@ body {
 .footer-pdf a { border-bottom: 1px solid #000000; }
 .footer-top a { display: inline-flex; align-items: center; gap: 6px; }
 
+/* ---------- FLOATING BACK-TO-TOP BUTTON ---------- */
+/* Stays fixed in the corner and fades in once the reader has scrolled
+   past the hero, so "back to top" is always reachable without needing
+   to scroll all the way down to the footer first. */
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #000000;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+  z-index: 900;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.back-to-top:hover { background: #222222; }
+
+@media (max-width: 992px) {
+  .back-to-top { right: 18px; bottom: 18px; width: 40px; height: 40px; font-size: 16px; }
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 992px) {
   .dossier-nav { padding: 18px 24px; }
@@ -294,6 +337,12 @@ body {
   /* Hamburger menu */
   .nav-toggle { display: flex; }
 
+  /* Positioned fully within the viewport at all times (right:0, bounded
+     width) and toggled with opacity/visibility rather than an off-screen
+     transform — an off-screen transform on a fixed element can expand
+     the page's horizontal scroll area in some browsers, which is what
+     previously forced an overflow-x:hidden workaround that broke the
+     sticky nav. This avoids the problem at the source instead. */
   .nav-actions {
     position: fixed;
     top: 0;
@@ -307,11 +356,18 @@ body {
     gap: 28px;
     padding: 110px 36px 40px;
     box-shadow: -8px 0 32px rgba(0,0,0,0.12);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0s linear 0.25s;
     z-index: 1050;
   }
-  .nav-actions.is-open { transform: translateX(0); }
+  .nav-actions.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.25s ease;
+  }
 
   .nav-link { font-size: 13px; opacity: 1; }
 

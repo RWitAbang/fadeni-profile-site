@@ -1,5 +1,5 @@
 async function loadProfile() {
-  const res = await fetch('content.json');
+  const res = await fetch('content.json?v=3');
   const data = await res.json();
 
   // ---- Hero ----

@@ -270,14 +270,13 @@ for r in data["recognition"]:
         Paragraph(esc(r["award"]), styles["RecAward"]),
         Paragraph(meta, styles["RecMeta"]),
     ])
-t = Table(rec_rows, colWidths=[FRAME_W - 2.4 * inch, 2.4 * inch], hAlign="LEFT")
+t = Table(rec_rows, colWidths=[FRAME_W / 2, FRAME_W / 2], hAlign="LEFT")
 t.setStyle(TableStyle([
     ("LINEBELOW", (0, 0), (-1, -1), 0.5, GREY_LINE),
     ("LEFTPADDING", (0, 0), (0, -1), 0),
     ("RIGHTPADDING", (-1, 0), (-1, -1), 0),
     ("TOPPADDING", (0, 0), (-1, -1), 10),
     ("BOTTOMPADDING", (0, 0), (-1, -1), 10),
-    ("ALIGN", (1, 0), (1, -1), "RIGHT"),
     ("VALIGN", (0, 0), (-1, -1), "TOP"),
 ]))
 # Keep the heading and the full table together so the heading never gets

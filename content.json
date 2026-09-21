@@ -38,14 +38,6 @@
       "detail": "Board leadership of Nigeria's leading aviation ground-handling company. Secured multi-year contract renewals with major airlines at Lagos and Abuja airports; led operational transformation that improved turnaround times."
     },
     {
-      "title": "Offshore Energy",
-      "org": "GMT Energy Resources Limited",
-      "role": "Founder & Managing Director/CEO",
-      "period": "2007 – Present",
-      "current": true,
-      "detail": "Founded and built an integrated Offshore Engineering, Procurement, and Installation (EPIC) and marine logistics company serving Nigeria's oil & gas sector, with offices in Lagos and Port Harcourt."
-    },
-    {
       "title": "Upstream Investments",
       "org": "Forte Upstream Services Limited",
       "role": "Chairman",
@@ -70,6 +62,14 @@
       "detail": "Board-level involvement in the Nigerian industrial ecosystem surrounding the EGINA FPSO development, guiding the integration project and ensuring on-time delivery of six complex topside modules."
     },
     {
+      "title": "Offshore Energy",
+      "org": "GMT Energy Resources Limited",
+      "role": "Founder & Managing Director/CEO",
+      "period": "2007 – Present",
+      "current": true,
+      "detail": "Founded and built an integrated Offshore Engineering, Procurement, and Installation (EPIC) and marine logistics company serving Nigeria's oil & gas sector, with offices in Lagos and Port Harcourt."
+    },
+    {
       "title": "Mergers & Acquisitions Advisory",
       "org": "Consolidated Hallmark Holdings Plc",
       "role": "Former Non-Executive Director",
@@ -89,12 +89,12 @@
   ],
 
   "recognition": [
-    { "award": "African Energy Leader of the Year", "issuer": "African Leadership Award, Ghana", "year": "2021" },
     { "award": "Excellence in Educational Philanthropy", "issuer": "Obafemi Awolowo University", "year": "2023" },
-    { "award": "Kwame Nkrumah Leadership Award", "issuer": "West Africa Students' Union", "year": "2015" },
-    { "award": "International Who's Who of Professionals", "issuer": "", "year": "2012" },
+    { "award": "African Energy Leader of the Year", "issuer": "African Leadership Award, Ghana", "year": "2021" },
     { "award": "Most Security Conscious & Friendly Businessman", "issuer": "The Lagos Watch", "year": "2019" },
-    { "award": "Icon of Hope & Philanthropist of Our Time", "issuer": "National Association of Nigerian Students (NANS)", "year": "2016" }
+    { "award": "Icon of Hope & Philanthropist of Our Time", "issuer": "National Association of Nigerian Students (NANS)", "year": "2016" },
+    { "award": "Kwame Nkrumah Leadership Award", "issuer": "West Africa Students' Union", "year": "2015" },
+    { "award": "International Who's Who of Professionals", "issuer": "", "year": "2012" }
   ],
 
   "contact": {

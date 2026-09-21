@@ -161,3 +161,35 @@ async function loadProfile() {
 }
 
 loadProfile();
+
+// ---- Mobile hamburger menu ----
+function initNavToggle() {
+  const toggle = document.getElementById('nav-toggle');
+  const actions = document.getElementById('nav-actions');
+  const scrim = document.getElementById('nav-scrim');
+  if (!toggle || !actions) return;
+
+  function openMenu() {
+    actions.classList.add('is-open');
+    if (scrim) scrim.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+  }
+  function closeMenu() {
+    actions.classList.remove('is-open');
+    if (scrim) scrim.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = actions.classList.contains('is-open');
+    isOpen ? closeMenu() : openMenu();
+  });
+  if (scrim) scrim.addEventListener('click', closeMenu);
+  actions.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+}
+
+initNavToggle();

@@ -17,12 +17,18 @@
 
   <nav class="dossier-nav">
     <img src="assets/seindefadeni-signature.png" alt="Dr. Seinde Fadeni Signature" class="brand-logo">
-    <div class="nav-actions">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-actions" id="nav-actions">
       <a href="#profile" class="nav-link">Profile</a>
-      <a href="#footprint" class="nav-link">Footprint</a>
+      <a href="#capability" class="nav-link">Expertise</a>
+      <a href="#footprint" class="nav-link">Experience</a>
+      <a href="#credentials" class="nav-link">Credentials</a>
       <a href="#recognition" class="nav-link">Recognition</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
+    <div class="nav-scrim" id="nav-scrim"></div>
   </nav>
 
   <main>
@@ -56,7 +62,7 @@
       </div>
     </section>
 
-    <section class="dossier-section section-light">
+    <section id="capability" class="dossier-section section-light">
       <div class="section-inner">
         <div class="section-header">
           <span class="section-num">02 — Capability</span>
@@ -76,7 +82,7 @@
       </div>
     </section>
 
-    <section id="governance" class="dossier-section section-light">
+    <section id="credentials" class="dossier-section section-light">
       <div class="section-inner">
         <div class="section-header">
           <span class="section-num">04 — Credentials</span>

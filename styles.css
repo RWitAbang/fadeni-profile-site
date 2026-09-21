@@ -55,6 +55,9 @@ body {
 }
 .nav-link:hover { opacity: 1; }
 
+/* Mobile menu overlay — hidden on desktop so it never affects nav layout */
+.nav-scrim { display: none; }
+
 /* Hamburger toggle — hidden on desktop */
 .nav-toggle {
   display: none;

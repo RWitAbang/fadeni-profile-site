@@ -49,6 +49,10 @@ doc = SimpleDocTemplate(
     title=f"{data['name']} — Executive Profile",
 )
 
+# Usable width inside the page frame (ReportLab pads the frame 6pt per side);
+# full-width tables use this so they line up with headings and dividers.
+FRAME_W = LETTER[0] - 1.5 * inch - 12
+
 styles = {
     "SectionNum": ParagraphStyle(
         "SectionNum", fontName="Helvetica-Bold", fontSize=8.5, leading=11,
@@ -244,9 +248,11 @@ for e in data["education"]:
         Paragraph(f"<b>{esc(e['institution'])}</b>", styles["EduRow"]),
         Paragraph(esc(e["credential"]), styles["EduRow"]),
     ])
-t = Table(edu_rows, colWidths=[3.1 * inch, 3.1 * inch])
+t = Table(edu_rows, colWidths=[FRAME_W / 2, FRAME_W / 2], hAlign="LEFT")
 t.setStyle(TableStyle([
     ("LINEBELOW", (0, 0), (-1, -1), 0.5, GREY_LINE),
+    ("LEFTPADDING", (0, 0), (0, -1), 0),
+    ("RIGHTPADDING", (-1, 0), (-1, -1), 0),
     ("TOPPADDING", (0, 0), (-1, -1), 8),
     ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
     ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -264,9 +270,11 @@ for r in data["recognition"]:
         Paragraph(esc(r["award"]), styles["RecAward"]),
         Paragraph(meta, styles["RecMeta"]),
     ])
-t = Table(rec_rows, colWidths=[4.4 * inch, 1.8 * inch])
+t = Table(rec_rows, colWidths=[FRAME_W - 2.4 * inch, 2.4 * inch], hAlign="LEFT")
 t.setStyle(TableStyle([
     ("LINEBELOW", (0, 0), (-1, -1), 0.5, GREY_LINE),
+    ("LEFTPADDING", (0, 0), (0, -1), 0),
+    ("RIGHTPADDING", (-1, 0), (-1, -1), 0),
     ("TOPPADDING", (0, 0), (-1, -1), 10),
     ("BOTTOMPADDING", (0, 0), (-1, -1), 10),
     ("ALIGN", (1, 0), (1, -1), "RIGHT"),

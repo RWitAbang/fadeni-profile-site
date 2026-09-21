@@ -1,0 +1,119 @@
+{
+  "name": "Dr. Seinde Oladapo Fadeni",
+  "heroSubtitle": "Chairman & Founder with more than 30 years of corporate leadership — shaping high-impact enterprise across Nigeria's Aviation, Energy and Maritime sectors.",
+
+  "executiveProfile": [
+    "Dr. Seinde Oladapo Fadeni is a Nigerian entrepreneur, investor and corporate leader with more than three decades of experience building, scaling and providing strategic leadership across energy, aviation and maritime sectors. He founded GMT Energy Resources in 2007 and grew it into a $700 million provider of engineering and marine logistics services to Nigeria's oil & gas sector.",
+    "Over the course of his career, he has founded and led businesses, chaired corporate boards, and advised on strategic growth, investment and enterprise transformation. His leadership spans both privately held enterprises and major corporate institutions, including NAHCO PLC, GMT Energy Resources and Forte Upstream Services.",
+    "As Chairman of NAHCO PLC, he secured multi-year contract renewals with major airlines and led operational transformation that improved turnaround times. At Godsmart, his board leadership delivered a 44% increase in revenue. At Forte Upstream Services, he repositioned the company from core operations into a diversified investment and project-development firm. His board experience also extends internationally: he served on the board of Samsung Heavy Industries Nigeria during the integration of six topside modules for the EGINA FPSO, one of Nigeria's largest offshore energy developments.",
+    "He is now focused on building enduring enterprises and identifying strategic investment opportunities capable of competing at scale — within Nigeria, across Africa, and in partnership with international markets."
+  ],
+
+  "strategicValueDrivers": [
+    {
+      "title": "Entrepreneurial Founder",
+      "desc": "Founded GMT Energy Resources Limited in 2007 and built it from the ground up into a $700 million integrated Offshore Engineering, Procurement and Installation (EPIC) and marine logistics company serving Nigeria's oil & gas sector, with offices in Lagos and Port Harcourt."
+    },
+    {
+      "title": "Turnaround & Governance Leadership",
+      "desc": "As Chairman of NAHCO PLC, secured multi-year contract renewals with major airlines at Lagos and Abuja airports and led an operational transformation that improved turnaround times. As Chairman of Godsmart Nig Ltd, steered the board to a 44% increase in revenue."
+    },
+    {
+      "title": "Capital & M&A Judgment",
+      "desc": "Provided strategic M&A advisory as a board member of Consolidated Hallmark Holdings Plc (Dec 2024 – Dec 2025), including identifying and evaluating acquisition opportunities at board level."
+    },
+    {
+      "title": "Cross-Sector, International Fluency",
+      "desc": "Board-level experience spanning aviation, energy and maritime sectors, including service on the board of Samsung Heavy Industries Nigeria during the integration of six topside modules for the EGINA FPSO — one of Nigeria's largest offshore energy developments."
+    }
+  ],
+
+  "sectorFootprint": [
+    {
+      "title": "Aviation Services",
+      "org": "NAHCO PLC",
+      "role": "Chairman",
+      "period": "2018 – Present",
+      "current": true,
+      "detail": "Board leadership of Nigeria's leading aviation ground-handling company. Secured multi-year contract renewals with major airlines at Lagos and Abuja airports; led operational transformation that improved turnaround times."
+    },
+    {
+      "title": "Offshore Energy",
+      "org": "GMT Energy Resources Limited",
+      "role": "Founder & Managing Director/CEO",
+      "period": "2007 – Present",
+      "current": true,
+      "detail": "Founded and built an integrated Offshore Engineering, Procurement, and Installation (EPIC) and marine logistics company serving Nigeria's oil & gas sector, with offices in Lagos and Port Harcourt."
+    },
+    {
+      "title": "Upstream Investments",
+      "org": "Forte Upstream Services Limited",
+      "role": "Chairman",
+      "period": "Present",
+      "current": true,
+      "detail": "Provided strategic leadership in repositioning the company from core operations into a diversified investment and project-development firm."
+    },
+    {
+      "title": "Ground Handling Services",
+      "org": "Godsmart Nig Ltd",
+      "role": "Chairman",
+      "period": "Present",
+      "current": true,
+      "detail": "Board leadership of a West Africa ground-handling service provider; steered the board toward a 44% increase in revenue."
+    },
+    {
+      "title": "Marine Infrastructure",
+      "org": "Samsung Heavy Industries Nigeria",
+      "role": "Non-Executive Director",
+      "period": "Present",
+      "current": true,
+      "detail": "Board-level involvement in the Nigerian industrial ecosystem surrounding the EGINA FPSO development, guiding the integration project and ensuring on-time delivery of six complex topside modules."
+    },
+    {
+      "title": "Mergers & Acquisitions Advisory",
+      "org": "Consolidated Hallmark Holdings Plc",
+      "role": "Former Non-Executive Director",
+      "period": "Dec 2024 – Dec 2025",
+      "current": false,
+      "detail": "Provided strategic M&A advisory, including identifying and evaluating acquisition opportunities. Resigned from the board in December 2025."
+    }
+  ],
+
+  "education": [
+    { "credential": "Owner/President Management Program (OPM)", "institution": "Harvard Business School" },
+    { "credential": "Executive Programme", "institution": "INSEAD" },
+    { "credential": "Executive Programme", "institution": "IMD" },
+    { "credential": "B.Sc., Biology", "institution": "University of Lagos" },
+    { "credential": "Honorary Doctorate, Entrepreneurship", "institution": "Joseph Ayo Babalola University (2019)" },
+    { "credential": "Honorary Doctorate, Management", "institution": "Kaduna State University (2021)" }
+  ],
+
+  "recognition": [
+    { "award": "African Energy Leader of the Year", "issuer": "African Leadership Award, Ghana", "year": "2021" },
+    { "award": "Excellence in Educational Philanthropy", "issuer": "Obafemi Awolowo University", "year": "2023" },
+    { "award": "Kwame Nkrumah Leadership Award", "issuer": "West Africa Students' Union", "year": "2015" },
+    { "award": "International Who's Who of Professionals", "issuer": "", "year": "2012" },
+    { "award": "Most Security Conscious & Friendly Businessman", "issuer": "The Lagos Watch", "year": "2019" },
+    { "award": "Icon of Hope & Philanthropist of Our Time", "issuer": "National Association of Nigerian Students (NANS)", "year": "2016" }
+  ],
+
+  "contact": {
+    "linkedin": "https://www.linkedin.com/in/dr-seinde-fadeni-74838b25",
+    "businessEmail": "office@seindefadeni.com",
+    "businessEmailIsPlaceholder": true,
+    "mainSite": "https://www.seindefadeni.com",
+    "line1": "For strategic collaborations, direct advisory, or general corporate matters, please direct all communication to {businessEmail}.",
+    "line2": "To explore ongoing philanthropic initiatives, personal foundation work, and broader venture investments, visit {mainSite}.",
+    "line3": "You can also connect professionally via LinkedIn."
+  },
+
+  "photo": {
+    "status": "confirmed",
+    "url": "assets/portrait.jpg",
+    "note": "Supplied directly by the client, September 2026."
+  },
+
+  "domain": {
+    "status": "pending client decision — subdomain (e.g. profile.seindefadeni.com) vs. standalone domain"
+  }
+}

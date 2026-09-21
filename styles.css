@@ -1,0 +1,242 @@
+/* Dr. Seinde Oladapo Fadeni — Executive Profile
+   Build matches the approved mockup: all-white editorial layout,
+   Georgia serif headlines, sticky nav, numbered sections. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- NAV ---------- */
+.dossier-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 24px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.nav-actions { display: flex; align-items: center; gap: 32px; }
+
+.nav-link {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000000;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+.nav-link:hover { opacity: 1; }
+
+/* ---------- SECTION SHELL ---------- */
+.dossier-section {
+  width: 100%;
+  padding: 140px 60px;
+  display: flex;
+  justify-content: center;
+}
+.section-inner { max-width: 1200px; width: 100%; }
+
+.section-header { margin-bottom: 64px; }
+.section-num {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 12px;
+  color: #888888;
+}
+.dossier-section h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E5E5E5;
+  color: #000000;
+}
+
+/* ---------- HERO ---------- */
+.hero-section { padding-top: 200px; }
+.hero-title {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  color: #000000;
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  color: #555555;
+  line-height: 1.5;
+  max-width: 760px;
+}
+
+/* ---------- PROFILE (with portrait) ---------- */
+.profile-flex { display: flex; flex-direction: row; align-items: flex-start; }
+.profile-photo-col { flex: 0 0 340px; width: 340px; margin-right: 60px; }
+.profile-photo {
+  width: 340px;
+  height: 440px;
+  background: #F2F2F0;
+  border: 1px solid #E0DED8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.profile-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.profile-photo span {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999999;
+  text-align: center;
+  padding: 0 24px;
+  line-height: 1.6;
+}
+.profile-text-col { flex: 1 1 auto; min-width: 0; }
+
+.narrative-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+.lead-p { font-family: Georgia, serif; font-size: 21px; line-height: 1.6; color: #222222; }
+.body-p { font-size: 15px; line-height: 1.8; color: #555555; margin-bottom: 20px; }
+
+/* ---------- STRATEGIC VALUE DRIVERS ---------- */
+.drivers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.driver-card { background: #F9F9F9; border: 1px solid #E5E5E5; padding: 48px 40px; }
+.driver-index {
+  font-size: 12px; font-weight: 700; color: #555555; letter-spacing: 2px;
+  margin-bottom: 24px; display: block;
+}
+.driver-title { font-family: Georgia, serif; font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 16px; }
+.driver-desc { font-size: 14px; color: #555555; line-height: 1.7; }
+
+/* ---------- SECTOR FOOTPRINT ---------- */
+.footprint-list { display: flex; flex-direction: column; }
+.footprint-item {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  padding: 36px 0;
+  border-bottom: 1px solid #E5E5E5;
+}
+.footprint-item:first-child { border-top: 1px solid #E5E5E5; }
+.footprint-title { font-family: Georgia, serif; font-size: 23px; font-weight: 400; color: #000000; display: inline; }
+.former-tag {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #999999;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+  padding: 3px 8px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.footprint-role {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+  color: #888888; display: block; margin-top: 8px;
+}
+.footprint-desc { font-size: 15px; color: #444444; line-height: 1.7; }
+
+/* ---------- EDUCATION ---------- */
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 60px; list-style: none; }
+.edu-grid li {
+  padding: 16px 0; border-bottom: 1px solid #E5E5E5; font-size: 14px; color: #333333;
+  display: flex; justify-content: space-between; gap: 16px;
+}
+.edu-grid li strong { color: #000000; font-weight: 500; }
+
+/* ---------- RECOGNITION ---------- */
+.rec-item {
+  padding: 20px 0; border-bottom: 1px solid #E5E5E5; display: flex;
+  justify-content: space-between; align-items: baseline;
+}
+.rec-item:first-child { border-top: 1px solid #E5E5E5; }
+.rec-award { font-size: 16px; font-weight: 500; color: #000000; }
+.rec-meta { font-size: 13px; color: #888888; text-align: right; }
+
+/* ---------- CONTACT ---------- */
+.contact-copy p {
+  font-family: Georgia, serif;
+  font-size: 19px;
+  line-height: 1.7;
+  color: #222222;
+  margin-bottom: 22px;
+}
+.contact-copy p:last-child { margin-bottom: 0; }
+.contact-copy a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+  font-family: Arial, sans-serif;
+  font-size: 0.78em;
+}
+
+/* ---------- FOOTER ---------- */
+.dossier-footer {
+  background: #FFFFFF;
+  color: #666666;
+  padding: 40px 60px;
+  border-top: 1px solid #E5E5E5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.dossier-footer a { color: #000000; text-decoration: none; }
+.footer-pdf a { border-bottom: 1px solid #000000; }
+.footer-top a { display: inline-flex; align-items: center; gap: 6px; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  .dossier-nav { padding: 20px 30px; }
+  .dossier-section { padding: 100px 30px; }
+  .hero-section { padding-top: 160px; }
+  .hero-title { font-size: 40px; }
+
+  .profile-flex { flex-direction: column; }
+  .profile-photo-col { width: 100%; margin-right: 0; margin-bottom: 32px; }
+  .profile-photo { width: 100%; height: 320px; }
+
+  .narrative-grid,
+  .drivers-grid,
+  .edu-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .footprint-item { grid-template-columns: 1fr; gap: 10px; }
+
+  .dossier-footer { padding: 32px 30px; flex-direction: column; gap: 16px; align-items: flex-start; }
+}

@@ -16,10 +16,9 @@ from reportlab.lib.pagesizes import LETTER
 from reportlab.lib.units import inch
 from reportlab.lib.colors import HexColor
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.lib.enums import TA_LEFT, TA_JUSTIFY
+from reportlab.lib.enums import TA_LEFT
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, Image,
-    KeepTogether
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, Image
 )
 from reportlab.lib.utils import ImageReader
 import os
@@ -68,11 +67,11 @@ styles = {
     ),
     "LeadP": ParagraphStyle(
         "LeadP", fontName="Times-Roman", fontSize=13, leading=19,
-        textColor=INK, spaceAfter=10, alignment=TA_JUSTIFY,
+        textColor=INK, spaceAfter=10,
     ),
     "BodyP": ParagraphStyle(
         "BodyP", fontName="Helvetica", fontSize=9.5, leading=15,
-        textColor=GREY_DARK, spaceAfter=8, alignment=TA_JUSTIFY,
+        textColor=GREY_DARK, spaceAfter=8,
     ),
     "DriverTitle": ParagraphStyle(
         "DriverTitle", fontName="Times-Roman", fontSize=13, leading=16,
@@ -80,7 +79,7 @@ styles = {
     ),
     "DriverDesc": ParagraphStyle(
         "DriverDesc", fontName="Helvetica", fontSize=8.5, leading=13,
-        textColor=GREY_DARK, alignment=TA_JUSTIFY,
+        textColor=GREY_DARK,
     ),
     "FootTitle": ParagraphStyle(
         "FootTitle", fontName="Times-Roman", fontSize=13, leading=16,
@@ -92,7 +91,7 @@ styles = {
     ),
     "FootDesc": ParagraphStyle(
         "FootDesc", fontName="Helvetica", fontSize=9.5, leading=14,
-        textColor=HexColor("#444444"), alignment=TA_JUSTIFY,
+        textColor=HexColor("#444444"),
     ),
     "EduRow": ParagraphStyle(
         "EduRow", fontName="Helvetica", fontSize=9, leading=13, textColor=HexColor("#333333"),
@@ -105,7 +104,7 @@ styles = {
     ),
     "ContactP": ParagraphStyle(
         "ContactP", fontName="Times-Roman", fontSize=11.5, leading=17,
-        textColor=HexColor("#222222"), spaceAfter=10, alignment=TA_JUSTIFY,
+        textColor=HexColor("#222222"), spaceAfter=10,
     ),
     "FooterNote": ParagraphStyle(
         "FooterNote", fontName="Helvetica", fontSize=7.5, leading=11, textColor=GREY_MID,
@@ -213,15 +212,12 @@ for f in data["sectorFootprint"]:
     title = esc(f["title"])
     if not f["current"]:
         title += ' <font size="7" color="#999999">[FORMER]</font>'
-    entry = [
-        Paragraph(title, styles["FootTitle"]),
-        Paragraph(f"{esc(f['org'])} &nbsp;·&nbsp; {esc(f['period'])}", styles["FootRole"]),
-        Paragraph(f"<b>{esc(f['role'])}</b> — {esc(f['detail'])}", styles["FootDesc"]),
-        Spacer(1, 12),
-        HRFlowable(width="100%", thickness=0.5, color=GREY_LINE),
-        Spacer(1, 12),
-    ]
-    story.append(KeepTogether(entry))
+    story.append(Paragraph(title, styles["FootTitle"]))
+    story.append(Paragraph(f"{esc(f['org'])} &nbsp;·&nbsp; {esc(f['period'])}", styles["FootRole"]))
+    story.append(Paragraph(f"<b>{esc(f['role'])}</b> — {esc(f['detail'])}", styles["FootDesc"]))
+    story.append(Spacer(1, 12))
+    story.append(HRFlowable(width="100%", thickness=0.5, color=GREY_LINE))
+    story.append(Spacer(1, 12))
 
 story.append(Spacer(1, 10))
 
@@ -247,6 +243,8 @@ story.append(HRFlowable(width="100%", thickness=0.75, color=GREY_LINE))
 story.append(Spacer(1, 22))
 
 # ---------- 05 RECOGNITION ----------
+story.append(Paragraph("05 — HONORS", styles["SectionNum"]))
+story.append(Paragraph("Recognition", styles["H2"]))
 rec_rows = []
 for r in data["recognition"]:
     meta = f"{esc(r['year'])}, {esc(r['issuer'])}" if r["issuer"] else esc(r["year"])
@@ -262,13 +260,7 @@ t.setStyle(TableStyle([
     ("ALIGN", (1, 0), (1, -1), "RIGHT"),
     ("VALIGN", (0, 0), (-1, -1), "TOP"),
 ]))
-# Keep the heading and the full table together so the heading never gets
-# stranded alone at the bottom of a page.
-story.append(KeepTogether([
-    Paragraph("05 — HONORS", styles["SectionNum"]),
-    Paragraph("Recognition", styles["H2"]),
-    t,
-]))
+story.append(t)
 story.append(Spacer(1, 22))
 story.append(HRFlowable(width="100%", thickness=0.75, color=GREY_LINE))
 story.append(Spacer(1, 22))

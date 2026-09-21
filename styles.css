@@ -260,9 +260,7 @@ body {
 .footer-top a { display: inline-flex; align-items: center; gap: 6px; }
 
 /* ---------- FLOATING BACK-TO-TOP BUTTON ---------- */
-/* Stays fixed in the corner and fades in once the reader has scrolled
-   past the hero, so "back to top" is always reachable without needing
-   to scroll all the way down to the footer first. */
+/* Always visible in the corner so "back to top" is reachable from anywhere. */
 .back-to-top {
   position: fixed;
   right: 28px;
@@ -279,13 +277,6 @@ body {
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   z-index: 900;
-}
-.back-to-top.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
-  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .back-to-top:hover { background: #222222; }
 

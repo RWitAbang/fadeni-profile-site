@@ -1,5 +1,6 @@
 async function loadProfile() {
-  const res = await fetch('content.json?v=3');
+  const res = await fetch('content.json?v=4');
+  if (!res.ok) throw new Error('Could not load content.json (' + res.status + ')');
   const data = await res.json();
 
   // ---- Hero ----
@@ -32,6 +33,9 @@ async function loadProfile() {
     const img = document.createElement('img');
     img.src = data.photo.url;
     img.alt = data.name;
+    img.width = 680;
+    img.height = 928;
+    img.decoding = 'async';
     photoBox.appendChild(img);
   }
 
@@ -193,23 +197,3 @@ function initNavToggle() {
 }
 
 initNavToggle();
-
-// ---- Floating back-to-top button ----
-function initBackToTop() {
-  const btn = document.getElementById('back-to-top');
-  if (!btn) return;
-  const SHOW_AFTER_PX = 480; // roughly past the hero section
-
-  function updateVisibility() {
-    if (window.scrollY > SHOW_AFTER_PX) {
-      btn.classList.add('is-visible');
-    } else {
-      btn.classList.remove('is-visible');
-    }
-  }
-
-  window.addEventListener('scroll', updateVisibility, { passive: true });
-  updateVisibility();
-}
-
-initBackToTop();
